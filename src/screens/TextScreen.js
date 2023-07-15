@@ -1,14 +1,29 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, TextInput } from "react-native";
+import React, { useState } from "react";
 
 const TextScreen = () => {
+  const [name, setName] = useState("");
   return (
     <View>
-      <Text>TextScreen</Text>
+      <Text>Enter Name</Text>
+      <TextInput
+        value={name}
+        style={styles.input}
+        autoCapitalize="none"
+        autoCorrect={false}
+        onChangeText={(newvalue) => setName(newvalue)}
+      />
+      <Text>My Name is :{name}</Text>
     </View>
   );
 };
 
-const style = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input: {
+    margin: 15,
+    borderColor: "black",
+    borderWidth: 1,
+  },
+});
 
 export default TextScreen;
