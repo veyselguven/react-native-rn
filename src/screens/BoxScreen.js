@@ -4,9 +4,9 @@ import React from "react";
 const BoxScreen = () => {
   return (
     <View style={styles.viewStyle}>
-      <Text style={styles.textStyle}>Child 1</Text>
-      <Text style={styles.textStyle}>Child 2</Text>
-      <Text style={styles.textStyle}>Child 3</Text>
+      <Text style={styles.textOneStyle}>Child 1</Text>
+      <Text style={styles.textTwoStyle}>Child 2</Text>
+      <Text style={styles.textThreeStyle}>Child 3</Text>
     </View>
   );
 };
@@ -15,10 +15,25 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     height: 200,
     borderColor: "black",
-    // flexDirection: "row",
-    justifyContent: "space-between",
   },
-  textStyle: {
+  textOneStyle: {
+    borderWidth: 3,
+    borderColor: "red",
+    fontSize: 18,
+    ...StyleSheet.absoluteFillObject,
+    // same things above
+    // position: "absolute",
+    // bottom: 0,
+    // top: 0,
+    // left: 0,
+    // right: 0,
+  },
+  textTwoStyle: {
+    borderWidth: 3,
+    borderColor: "red",
+    left: 10,
+  },
+  textThreeStyle: {
     borderWidth: 3,
     borderColor: "red",
   },

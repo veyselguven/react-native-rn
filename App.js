@@ -11,6 +11,7 @@ import SquareScreen from "./src/screens/SquareScreen";
 import TextScreen from "./src/screens/TextScreen";
 import TextExercise from "./src/screens/TextExercise";
 import BoxScreen from "./src/screens/BoxScreen";
+import TestBoxScreen from "./src/screens/TestBoxScreen";
 
 const navigator = createStackNavigator(
   {
@@ -25,6 +26,7 @@ const navigator = createStackNavigator(
     Text: TextScreen,
     TestInput: TextExercise,
     Box: BoxScreen,
+    TestBox: TestBoxScreen,
   },
   {
     initialRouteName: "Home",
